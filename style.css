@@ -1,0 +1,79 @@
+/* ==========================================================================
+   TIPOGRAFÍAS E IMPORTS
+   ========================================================================== */
+   @import url("https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap");
+
+   .font-logo-instagram {
+     font-family: "Monsieur La Doulaise", cursive;
+   }
+   
+   /* ==========================================================================
+      COMPORTAMIENTO GLOBAL DEL SCROLL
+      ========================================================================== */
+   html {
+     /* Scroll Smooth: Es indispensable para landings de una sola página. 
+        Hace que al dar clic en el menú, la pantalla se deslice con elegancia */
+     scroll-behavior: smooth;
+     scroll-padding-top: 90px; /* Evita que las secciones se peguen al tope por el header */
+     background-color: #0a0a0a;
+   }
+   
+   /* ==========================================================================
+      CARRUSEL DE OPINIONES (LIMPIO)
+      ========================================================================== */
+   #carrusel-opiniones::-webkit-scrollbar {
+     height: 4px;
+   }
+   
+   #carrusel-opiniones::-webkit-scrollbar-track {
+     background: transparent;
+   }
+   
+   #carrusel-opiniones::-webkit-scrollbar-thumb {
+     background: rgba(245, 158, 11, 0.2);
+     border-radius: 9999px;
+     transition: background 0.3s ease;
+   }
+   
+   #carrusel-opiniones::-webkit-scrollbar-thumb:hover {
+     background: rgba(245, 158, 11, 0.6);
+   }
+   
+   @supports (scrollbar-color: auto) {
+     #carrusel-opiniones {
+       scrollbar-color: rgba(245, 158, 11, 0.2) transparent;
+     }
+   }
+   
+   /* ==========================================================================
+      EFECTOS ELEGANTES DE APARICIÓN (FADE IN UP)
+      ========================================================================== */
+   /* En lugar de un fade genérico, el "Fade In Up" (subir sutilmente mientras aparece)
+      es el efecto que usan las marcas de lujo como Apple o agencias de diseño premium */
+   .reveal {
+     opacity: 0;
+     transform: translateY(30px);
+     transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), 
+                 transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+   }
+   
+   .reveal.active {
+     opacity: 1;
+     transform: translateY(0);
+   }
+   
+   /* ==========================================================================
+      ESTILOS ADICIONALES PARA EL HEADER CAMALEÓN
+      ========================================================================== */
+   header {
+     transition: background-color 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
+   }
+   
+   /* Cuando el usuario scrollea, JS le clavará esta clase */
+   header.scrolled {
+     background-color: rgba(10, 10, 10, 0.95) !important;
+     border-color: rgba(255, 255, 255, 0.05) !important;
+     backdrop-blur: md;
+     padding-top: 1rem !important;
+     padding-bottom: 1rem !important;
+   }
