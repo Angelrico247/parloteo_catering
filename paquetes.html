@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paquetes & Experiencias | Parloteo GDL</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="overflow-x-hidden antialiased bg-[#0d0d0d] text-stone-300 selection:bg-amber-500 selection:text-neutral-950"
+  >
+    <header
+      class="fixed top-0 left-0 z-50 grid items-center w-full grid-cols-2 px-6 py-6 transition-all duration-300 bg-transparent border-b border-transparent md:grid-cols-3"
+    >
+      <div
+        class="flex items-center justify-start text-2xl font-semibold tracking-wider font-serif-elegant"
+      >
+        <a
+          href="index.html"
+          class="pt-1 text-4xl tracking-normal text-white normal-case transition duration-300 md:text-5xl font-logo-instagram hover:text-amber-400"
+          aria-label="Inicio"
+        >
+          Parloteo<span
+            class="relative font-sans text-2xl text-amber-500 -top-2"
+            >.</span
+          >
+        </a>
+      </div>
+
+      <nav
+        class="items-center hidden space-x-8 text-xs font-medium tracking-widest uppercase md:flex md:justify-center"
+        aria-label="Menú principal"
+      >
+        <a
+          href="index.html"
+          class="transition text-white/80 hover:text-amber-400"
+          >Inicio</a
+        >
+        <a
+          href="menu.html"
+          class="transition text-white/80 hover:text-amber-400"
+          >Menú</a
+        >
+        <a
+          href="paquetes.html"
+          class="transition text-white/80 hover:text-amber-400"
+          >Paquetes</a
+        >
+        <a
+          href="index.html#gallery"
+          class="transition text-white/80 hover:text-amber-400"
+          >Gallery</a
+        >
+        <a
+          href="index.html#sobre-nosotros"
+          class="transition text-white/80 hover:text-amber-400"
+          >Nosotros</a
+        >
+        <a
+          href="contacto.html"
+          class="transition text-white/80 hover:text-amber-400"
+          >Contacto</a
+        >
+      </nav>
+
+      <div class="items-center justify-end hidden md:flex">
+        <a
+          href="contacto.html"
+          class="border border-white/40 hover:border-amber-400 px-5 py-2.5 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:bg-amber-500 hover:text-neutral-950 whitespace-nowrap"
+        >
+          Cotizar Evento
+        </a>
+      </div>
+
+      <div class="flex items-center justify-end md:hidden">
+        <button
+          class="text-white focus:outline-none"
+          id="btn-menu"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-7 h-7"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div id="menu-movil" class="fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out -translate-y-4 opacity-0 pointer-events-none bg-neutral-950/98 backdrop-blur-lg">
+        <nav class="flex flex-col items-center space-y-6 text-sm font-medium tracking-widest uppercase">
+          <a href="index.html" class="text-white transition hover:text-amber-400">Inicio</a>
+          <a href="menu.html" class="text-white transition hover:text-amber-400">Menú</a>
+          <a href="paquetes.html" class="text-white transition hover:text-amber-400">Paquetes</a>
+          <a href="index.html#gallery" class="text-white transition hover:text-amber-400">Gallery</a>
+          <a href="index.html#sobre-nosotros" class="text-white transition hover:text-amber-400">Nosotros</a>
+          <a href="contacto.html" class="text-white transition hover:text-amber-400">Contacto</a>
+          <a href="contacto.html" class="px-6 py-3 mt-4 text-xs tracking-widest uppercase transition border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-neutral-950">Cotizar Evento</a>
+        </nav>
+      </div>
+
+    <section
+      class="relative w-full min-h-[35vh] mb-20 bg-cover bg-center flex items-center justify-center pt-20"
+      style="
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(13, 13, 13, 0.95) 90%
+          ),
+          url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1600&auto=format&fit=crop');
+      "
+    >
+      <div class="px-6 mx-auto text-center max-w-7xl md:px-16 reveal fade-up">
+        <span
+          class="block mb-3 text-3xl italic font-medium tracking-wide text-amber-400 font-serif-elegant"
+          >Experiencias a la medida</span
+        >
+        <h1
+          class="mb-2 text-4xl font-normal tracking-tight text-white uppercase md:text-6xl font-serif-elegant"
+        >
+          Paquetes Exclusivos
+        </h1>
+        <span
+          class="block text-sm font-light tracking-widest uppercase text-stone-400"
+          >Diseñados para trascender</span
+        >
+      </div>
+    </section>
+
+    <section class="px-6 pb-24 bg-[#0d0d0d] md:px-16 -mt-12 relative z-10">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-16 text-center">
+          <h2 class="mb-4 text-3xl text-white font-serif-elegant">
+            Nuestras Propuestas
+          </h2>
+          <p
+            class="text-xs font-light tracking-widest uppercase text-stone-400"
+          >
+            Selecciona la base ideal para tu evento clandestino
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div
+            class="flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[180px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    Fuego & Brasa
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-amber-500 tracking-wider mb-2"
+                  >Ideal para Amantes del Corte</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  Menú clandestino rústico basado en cocción lenta con leña de
+                  mezquite. Incluye Tomahawk premium, costillares glaseados y
+                  entradas al fuego directo.
+                </p>
+              </div>
+              <a
+                href="contacto.html"
+                class="text-left text-[10px] uppercase tracking-widest text-stone-400 hover:text-amber-400 font-medium transition-colors"
+              >
+                Cotizar este paquete →
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[180px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    Alta Cocina
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-amber-500 tracking-wider mb-2"
+                  >Enfoque Artístico e Individual</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  Emplatados finos de autor con técnicas vanguardistas. Tartar
+                  de salmón sustentable, risottos perfumados con trufa negra y
+                  texturas artesanales únicas.
+                </p>
+              </div>
+              <a
+                href="contacto.html"
+                class="text-left text-[10px] uppercase tracking-widest text-stone-400 hover:text-amber-400 font-medium transition-colors"
+              >
+                Cotizar este paquete →
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[180px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    Mixología de Autor
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-amber-500 tracking-wider mb-2"
+                  >Barras Temáticas Líquidas</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  Destilados premium, bitters de la casa, mezcalitas ahumadas de
+                  maracuyá y gins botánicos perfumados al momento por nuestros
+                  mixólogos.
+                </p>
+              </div>
+              <a
+                href="contacto.html"
+                class="text-left text-[10px] uppercase tracking-widest text-stone-400 hover:text-amber-400 font-medium transition-colors"
+              >
+                Cotizar este paquete →
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[180px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    The Parloteo Experience
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-amber-500 tracking-wider mb-2"
+                  >Catering & Coctelería Total</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  La fusión definitiva de nuestra cocina gourmet y barras de
+                  autor. Un viaje gastronómico completo diseñado
+                  milimétricamente para eventos privados.
+                </p>
+              </div>
+              <a
+                href="contacto.html"
+                class="text-left text-[10px] uppercase tracking-widest text-stone-400 hover:text-amber-400 font-medium transition-colors"
+              >
+                Cotizar este paquete →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="px-12 py-8 text-xs border-t bg-[#0d0d0d] text-stone-600 border-white/5"
+    >
+      <div
+        class="flex flex-col items-center justify-between gap-4 mx-auto max-w-7xl md:flex-row"
+      >
+        <div
+          class="text-xl font-bold tracking-tight text-white font-serif-elegant"
+        >
+          Parloteo<span class="text-amber-500">.</span>
+        </div>
+        <div class="tracking-wide">
+          &copy; 2026 Parloteo GDL. Todos los derechos reservados.
+        </div>
+        <div class="opacity-60">Diseñado con enfoque artesanal.</div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

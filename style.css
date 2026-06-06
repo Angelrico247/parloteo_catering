@@ -1,79 +1,107 @@
 /* ==========================================================================
-   TIPOGRAFÍAS E IMPORTS
+   1. TIPOGRAFÍAS E IMPORTS
    ========================================================================== */
-   @import url("https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap");
 
-   .font-logo-instagram {
-     font-family: "Monsieur La Doulaise", cursive;
-   }
-   
-   /* ==========================================================================
-      COMPORTAMIENTO GLOBAL DEL SCROLL
+.font-logo-instagram {
+  font-family: "Monsieur La Doulaise", cursive;
+}
+
+/* ==========================================================================
+      2. NAVBAR / HEADER CAMALEÓN
       ========================================================================== */
-   html {
-     /* Scroll Smooth: Es indispensable para landings de una sola página. 
-        Hace que al dar clic en el menú, la pantalla se deslice con elegancia */
-     scroll-behavior: smooth;
-     scroll-padding-top: 90px; /* Evita que las secciones se peguen al tope por el header */
-     background-color: #0a0a0a;
-   }
-   
-   /* ==========================================================================
-      CARRUSEL DE OPINIONES (LIMPIO)
+header {
+  transition: background-color 0.4s ease, border-color 0.4s ease,
+    padding 0.4s ease;
+}
+
+/* Cuando el usuario scrollea, JS le clava esta clase */
+header.scrolled {
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px); /* Corregido a propiedad nativa estándar */
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+/* ==========================================================================
+      3. SLIDER AUTOPLAY (FONDO DEL HERO)
       ========================================================================== */
-   #carrusel-opiniones::-webkit-scrollbar {
-     height: 4px;
-   }
-   
-   #carrusel-opiniones::-webkit-scrollbar-track {
-     background: transparent;
-   }
-   
-   #carrusel-opiniones::-webkit-scrollbar-thumb {
-     background: rgba(245, 158, 11, 0.2);
-     border-radius: 9999px;
-     transition: background 0.3s ease;
-   }
-   
-   #carrusel-opiniones::-webkit-scrollbar-thumb:hover {
-     background: rgba(245, 158, 11, 0.6);
-   }
-   
-   @supports (scrollbar-color: auto) {
-     #carrusel-opiniones {
-       scrollbar-color: rgba(245, 158, 11, 0.2) transparent;
-     }
-   }
-   
-   /* ==========================================================================
-      EFECTOS ELEGANTES DE APARICIÓN (FADE IN UP)
+.hero-slide {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* ==========================================================================
+      4. EFECTOS DE APARICIÓN (SCROLL REVEAL)
       ========================================================================== */
-   /* En lugar de un fade genérico, el "Fade In Up" (subir sutilmente mientras aparece)
-      es el efecto que usan las marcas de lujo como Apple o agencias de diseño premium */
-   .reveal {
-     opacity: 0;
-     transform: translateY(30px);
-     transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), 
-                 transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
-   }
-   
-   .reveal.active {
-     opacity: 1;
-     transform: translateY(0);
-   }
-   
-   /* ==========================================================================
-      ESTILOS ADICIONALES PARA EL HEADER CAMALEÓN
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+      5. CARRUSEL DE OPINIONES - CENTER MODE PREMIUM
       ========================================================================== */
-   header {
-     transition: background-color 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
-   }
-   
-   /* Cuando el usuario scrollea, JS le clavará esta clase */
-   header.scrolled {
-     background-color: rgba(10, 10, 10, 0.95) !important;
-     border-color: rgba(255, 255, 255, 0.05) !important;
-     backdrop-blur: md;
-     padding-top: 1rem !important;
-     padding-bottom: 1rem !important;
-   }
+
+/* Comportamiento global y transiciones fluidas */
+.opinion-card .inner-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+}
+
+/* Reglas de enfoque exclusivas para pantallas de escritorio (MD para arriba) */
+@media (min-width: 768px) {
+  /* Las cartas de los lados se atenúan visualmente y se difuminan */
+  .opinion-card .inner-card {
+    transform: scale(0.9);
+    opacity: 0.25;
+    filter: blur(2px);
+    pointer-events: none; /* Evita interacciones accidentales */
+  }
+
+  /* La carta del centro se ilumina, se enfoca y enciende el marco ámbar de tu mockup */
+  .opinion-card.is-center .inner-card {
+    transform: scale(1.03);
+    opacity: 1;
+    filter: blur(0);
+    pointer-events: auto;
+    border-color: #f59e0b; /* Color ámbar-500 de Tailwind */
+    box-shadow: 0 15px 40px -15px rgba(245, 158, 11, 0.15),
+      0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+}
+/* ==========================================================================
+   ESTADOS DE CONTROL PARA EL MODAL GLOBAL
+   ========================================================================== */
+   #modal-global.is-visible {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Scrollbar customizada y minimalista para el interior del modal */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(245, 158, 11, 0.3);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b;
+  }
+
+  

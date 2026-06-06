@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Gastronómico | Parloteo GDL</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="overflow-x-hidden antialiased bg-[#0d0d0d] text-stone-300 selection:bg-amber-500 selection:text-neutral-950"
+  >
+    <header
+      class="fixed top-0 left-0 z-50 grid items-center w-full grid-cols-2 px-6 py-6 transition-all duration-300 bg-transparent border-b border-transparent md:grid-cols-3"
+    >
+      <div
+        class="flex items-center justify-start text-2xl font-semibold tracking-wider font-serif-elegant"
+      >
+        <a
+          href="index.html"
+          class="pt-1 text-4xl tracking-normal text-white normal-case transition duration-300 md:text-5xl font-logo-instagram hover:text-amber-400"
+          aria-label="Inicio"
+        >
+          Parloteo<span
+            class="relative font-sans text-2xl text-amber-500 -top-2"
+            >.</span
+          >
+        </a>
+      </div>
+
+      <nav
+        class="items-center hidden space-x-8 text-xs font-medium tracking-widest uppercase md:flex md:justify-center"
+        aria-label="Menú principal"
+      >
+        <a
+          href="index.html"
+          class="transition text-white/80 hover:text-amber-400"
+          >Inicio</a
+        >
+        <a
+          href="menu.html"
+          class="transition text-white/80 hover:text-amber-400"
+          >Menú</a
+        >
+        <a
+          href="paquetes.html"
+          class="transition text-white/80 hover:text-amber-400"
+          >Paquetes</a
+        >
+        <a
+          href="index.html#gallery"
+          class="transition text-white/80 hover:text-amber-400"
+          >Gallery</a
+        >
+        <a
+          href="index.html#sobre-nosotros"
+          class="transition text-white/80 hover:text-amber-400"
+          >Nosotros</a
+        >
+        <a
+          href="contacto.html"
+          class="transition text-white/80 hover:text-amber-400"
+          >Contacto</a
+        >
+      </nav>
+
+      <div class="items-center justify-end hidden md:flex">
+        <a
+          href="contacto.html"
+          class="border border-white/40 hover:border-amber-400 px-5 py-2.5 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:bg-amber-500 hover:text-neutral-950 whitespace-nowrap"
+        >
+          Cotizar Evento
+        </a>
+      </div>
+
+      <div class="flex items-center justify-end md:hidden">
+        <button
+          class="text-white focus:outline-none"
+          id="btn-menu"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-7 h-7"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div id="menu-movil" class="fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out -translate-y-4 opacity-0 pointer-events-none bg-neutral-950/98 backdrop-blur-lg">
+        <nav class="flex flex-col items-center space-y-6 text-sm font-medium tracking-widest uppercase">
+          <a href="index.html" class="text-white transition hover:text-amber-400">Inicio</a>
+          <a href="menu.html" class="text-white transition hover:text-amber-400">Menú</a>
+          <a href="paquetes.html" class="text-white transition hover:text-amber-400">Paquetes</a>
+          <a href="index.html#gallery" class="text-white transition hover:text-amber-400">Gallery</a>
+          <a href="index.html#sobre-nosotros" class="text-white transition hover:text-amber-400">Sobre Nosotros</a>
+          <a href="contacto.html" class="text-white transition hover:text-amber-400">Contacto</a>
+          <a href="contacto.html" class="px-6 py-3 mt-4 text-xs tracking-widest uppercase transition border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-neutral-950">Cotizar Evento</a>
+        </nav>
+      </div>
+
+    <section
+      class="relative w-full min-h-[35vh] mb-20 bg-cover bg-center flex items-center justify-center pt-20"
+      style="
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(13, 13, 13, 0.95) 90%
+          ),
+          url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1600&auto=format&fit=crop');
+      "
+    >
+      <div class="px-6 mx-auto text-center max-w-7xl md:px-16 reveal fade-up">
+        <span
+          class="block mb-3 text-3xl italic font-medium tracking-wide text-amber-400 font-serif-elegant"
+          >Sabor sin límites</span
+        >
+        <h1
+          class="mb-2 text-4xl font-normal tracking-tight text-white uppercase md:text-6xl font-serif-elegant"
+        >
+          Nuestro Legado Gastronómico
+        </h1>
+      </div>
+    </section>
+
+    <section class="px-6 pb-24 bg-[#0d0d0d] md:px-16 -mt-12 relative z-10">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-10 text-center">
+          <h2 class="mb-6 text-3xl text-white font-serif-elegant">
+            Grid de Platillos
+          </h2>
+          <div
+            id="contenedor-filtros"
+            class="flex flex-wrap justify-center gap-6 text-xs tracking-widest uppercase"
+          >
+            <button
+              data-filter="all"
+              class="pb-1 font-medium transition border-b cursor-pointer filter-btn text-amber-400 border-amber-400"
+            >
+              Todo el Menú
+            </button>
+            <button
+              data-filter="fuegos"
+              class="transition cursor-pointer filter-btn text-stone-500 hover:text-white"
+            >
+              Fuegos
+            </button>
+            <button
+              data-filter="mixologia"
+              class="transition cursor-pointer filter-btn text-stone-500 hover:text-white"
+            >
+              Mixología
+            </button>
+            <button
+              data-filter="gourmet"
+              class="transition cursor-pointer filter-btn text-stone-500 hover:text-white"
+            >
+              Gourmet
+            </button>
+          </div>
+        </div>
+
+        <div id="grid-platillos" class="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div
+            data-category="fuegos"
+            class="item-platillo flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[160px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    Tomahawk a las Brasas
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-stone-500 tracking-wider mb-2"
+                  >Tomahawk a las Brasas. Premium</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  Details: Tomahawk a las brasas de pulgada y media, sellado
+                  directo con mantequilla de ajo.
+                </p>
+              </div>
+              <button
+                class="btn-paquete text-left text-[10px] uppercase tracking-widest text-amber-400 hover:text-amber-300 font-medium cursor-pointer"
+                data-titulo="Tomahawk a las Brasas"
+                data-precio="Incluido en menú Fuego & Brasa"
+                data-detalles="Gramaje Seleccionado: Cortes High-Choice de 1.2kg aproximados para compartir."
+              >
+                Ver Ficha Técnica de Emplatado →
+              </button>
+            </div>
+          </div>
+
+          <div
+            data-category="gourmet"
+            class="item-platillo flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[160px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    Tartar de Salmón & Aguacate
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-stone-500 tracking-wider mb-2"
+                  >Tartar de Salmón</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  Details: Aguacate criollo picado con cubos maridanos de salmón
+                  fresco en cítricos.
+                </p>
+              </div>
+              <button
+                class="btn-paquete text-left text-[10px] uppercase tracking-widest text-amber-400 hover:text-amber-300 font-medium cursor-pointer"
+                data-titulo="Tartar de Salmón & Aguacate"
+                data-precio="Incluido en menú Alta Cocina"
+                data-detalles="Origen: Salmón de aguas frías con corte sashimi al momento."
+              >
+                Ver Ficha Técnica de Emplatado →
+              </button>
+            </div>
+          </div>
+
+          <div
+            data-category="fuegos"
+            class="item-platillo flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[160px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    Costillar Ahumado
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-stone-500 tracking-wider mb-2"
+                  >Costillar Ahumado en Mezquite</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  Details: Costillas horneadas lentamente durante 8 horas con
+                  rub de especias caseras.
+                </p>
+              </div>
+              <button
+                class="btn-paquete text-left text-[10px] uppercase tracking-widest text-amber-400 hover:text-amber-300 font-medium cursor-pointer"
+                data-titulo="Costillar Ahumado"
+                data-precio="Incluido en menú Fuego & Brasa"
+                data-detalles="Ahumado: 8 horas continuas usando madera dura de mezquite local."
+              >
+                Ver Ficha Técnica de Emplatado →
+              </button>
+            </div>
+          </div>
+
+          <div
+            data-category="mixologia"
+            class="item-platillo flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[160px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    Smoked Mezcalita
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-stone-500 tracking-wider mb-2"
+                  >Mezcalita de Maracuyá</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  Details: Mezcal joven espadín balanceado con pulpa concentrada
+                  de maracuyá ácido.
+                </p>
+              </div>
+              <button
+                class="btn-paquete text-left text-[10px] uppercase tracking-widest text-amber-400 hover:text-amber-300 font-medium cursor-pointer"
+                data-titulo="Smoked Mezcalita"
+                data-precio="Barra Libre Premium"
+                data-detalles="Servido con escarcha fina artesanal de sal de gusano de Oaxaca."
+              >
+                Ver Ficha Técnica de Emplatado →
+              </button>
+            </div>
+          </div>
+
+          <div
+            data-category="gourmet"
+            class="item-platillo flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[160px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1476124369491-e7addf5db371?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    Risotto de Hongos
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-stone-500 tracking-wider mb-2"
+                  >Risotto Trufa Negra</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  Details: Arroz arborio cocinado en reducción de caldo de setas
+                  silvestres y parmesano.
+                </p>
+              </div>
+              <button
+                class="btn-paquete text-left text-[10px] uppercase tracking-widest text-amber-400 hover:text-amber-300 font-medium cursor-pointer"
+                data-titulo="Risotto de Hongos"
+                data-precio="Incluido en menú Alta Cocina"
+                data-detalles="Toque Final: Láminas sutiles de trufa negra fresca e hilos de aceite de oliva."
+              >
+                Ver Ficha Técnica de Emplatado →
+              </button>
+            </div>
+          </div>
+
+          <div
+            data-category="mixologia"
+            class="item-platillo flex flex-col sm:flex-row bg-[#161616] border border-white/5 rounded-lg overflow-hidden group hover:border-amber-500/20 transition-all duration-300 reveal fade-up"
+          >
+            <div
+              class="w-full sm:w-2/5 min-h-[160px] bg-cover bg-center"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="flex flex-col justify-between w-full p-6 sm:w-3/5">
+              <div>
+                <div class="flex items-baseline justify-between mb-1">
+                  <h3
+                    class="text-lg text-white transition-colors font-serif-elegant group-hover:text-amber-400"
+                  >
+                    Botanical Gin
+                  </h3>
+                </div>
+                <span
+                  class="block font-sans text-[10px] uppercase text-stone-500 tracking-wider mb-2"
+                  >Gin Infusion</span
+                >
+                <p
+                  class="mb-4 text-xs font-light leading-relaxed text-stone-400"
+                >
+                  Details: Ginebra premium estilo London Dry, combinada con
+                  tónica texturizada fina.
+                </p>
+              </div>
+              <button
+                class="btn-paquete text-left text-[10px] uppercase tracking-widest text-amber-400 hover:text-amber-300 font-medium cursor-pointer"
+                data-titulo="Botanical Gin"
+                data-precio="Barra Libre Premium"
+                data-detalles="Perfumado con rodajas deshidratadas de cítricos y romero."
+              >
+                Ver Ficha Técnica de Emplatado →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="px-12 py-8 text-xs border-t bg-[#0d0d0d] text-stone-600 border-white/5"
+    >
+      <div
+        class="flex flex-col items-center justify-between gap-4 mx-auto max-w-7xl md:flex-row"
+      >
+        <div
+          class="text-xl font-bold tracking-tight text-white font-serif-elegant"
+        >
+          Parloteo<span class="text-amber-500">.</span>
+        </div>
+        <div class="tracking-wide">
+          &copy; 2026 Parloteo GDL. Todos los derechos reservados.
+        </div>
+        <div class="opacity-60">Diseñado con enfoque artesanal.</div>
+      </div>
+    </footer>
+
+    <div
+      id="modal-global"
+      class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 transition-opacity duration-300 opacity-0 pointer-events-none bg-black/80 backdrop-blur-md"
+    >
+      <div
+        class="relative w-full max-w-lg p-8 transition-all duration-300 border shadow-2xl bg-neutral-900 border-white/10 md:p-10 shadow-black"
+      >
+        <button
+          id="modal-cerrar"
+          class="absolute transition-colors duration-200 top-4 right-4 text-white/50 hover:text-amber-400 focus:outline-none"
+          aria-label="Cerrar"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <div id="modal-content-area"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

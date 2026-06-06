@@ -21,22 +21,20 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
-
-
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="antialiased text-white bg-neutral-900">
     <!-- ==========================================
        HEADER / BARRA DE NAVEGACIÓN
        ========================================== -->
-       <header class="fixed top-0 left-0 z-50 grid items-center w-full grid-cols-2 px-6 py-6 transition-all duration-300 bg-transparent border-b border-transparent md:grid-cols-3">
-      <!-- Columna 1: Identificador de la marca (Izquierda) -->
+    <header
+      class="fixed top-0 left-0 z-50 grid items-center w-full grid-cols-2 px-6 py-6 transition-all duration-300 bg-transparent border-b border-transparent md:grid-cols-3"
+    >
       <div
         class="flex items-center justify-start text-2xl font-semibold tracking-wider font-serif-elegant"
       >
-
         <a
-          href="/"
+          href="index.html"
           class="pt-1 text-4xl tracking-normal text-white normal-case transition duration-300 md:text-5xl font-logo-instagram hover:text-amber-400"
           aria-label="Inicio"
         >
@@ -47,45 +45,51 @@
         </a>
       </div>
 
-      <!-- Columna 2: Menú de navegación principal (100% Centrado en Escritorio) -->
       <nav
         class="items-center hidden space-x-8 text-xs font-medium tracking-widest uppercase md:flex md:justify-center"
         aria-label="Menú principal"
       >
-        <a href="#menu" class="transition text-white/80 hover:text-amber-400"
+        <a
+          href="index.html"
+          class="transition text-white/80 hover:text-amber-400"
+          >Inicio</a
+        >
+        <a
+          href="menu.html"
+          class="transition text-white/80 hover:text-amber-400"
           >Menú</a
         >
         <a
-          href="#paquetes"
+          href="paquetes.html"
           class="transition text-white/80 hover:text-amber-400"
           >Paquetes</a
         >
-        <a href="#gallery" class="transition text-white/80 hover:text-amber-400"
+        <a
+          href="index.html#gallery"
+          class="transition text-white/80 hover:text-amber-400"
           >Gallery</a
         >
         <a
-          href="#sobre-nosotros"
+          href="index.html#sobre-nosotros"
           class="transition text-white/80 hover:text-amber-400"
-          >Sobre Nosotros</a
+          >Nosotros</a
         >
         <a
-          href="#contacto"
+          href="contacto.html"
           class="transition text-white/80 hover:text-amber-400"
           >Contacto</a
         >
       </nav>
 
-      <!-- Columna 3: Botón de conversión rápida (Derecha) -->
       <div class="items-center justify-end hidden md:flex">
         <a
-          href="#contacto"
+          href="contacto.html"
           class="border border-white/40 hover:border-amber-400 px-5 py-2.5 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:bg-amber-500 hover:text-neutral-950 whitespace-nowrap"
         >
           Cotizar Evento
         </a>
       </div>
 
-      <!-- Botón de apertura Móvil (Se alinea a la derecha automáticamente por el grid de 2 col en móvil) -->
       <div class="flex items-center justify-end md:hidden">
         <button
           class="text-white focus:outline-none"
@@ -113,57 +117,61 @@
     </header>
 
     <!-- Menú de navegación desplegable (Móvil) -->
-    <div
-      id="menu-movil"
-      class="fixed inset-0 z-40 flex flex-col items-center justify-center hidden space-y-8 text-xl tracking-widest uppercase bg-neutral-950/95 md:hidden"
-    >
-      <a href="#menu" class="text-white hover:text-amber-400">Menú</a>
-      <a href="#paquetes" class="text-white hover:text-amber-400">Paquetes</a>
-      <a href="#gallery" class="text-white hover:text-amber-400">Gallery</a>
-      <a href="#sobre-nosotros" class="text-white hover:text-amber-400"
-        >Sobre Nosotros</a
-      >
-      <a href="#contacto" class="text-white hover:text-amber-400">Contacto</a>
-      <a
-        href="#contacto"
-        class="px-6 py-2 text-sm border border-amber-400 text-amber-400"
-        >Cotizar Evento</a
-      >
-    </div>
+    <div id="menu-movil" class="fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out -translate-y-4 opacity-0 pointer-events-none bg-neutral-950/98 backdrop-blur-lg">
+        <nav class="flex flex-col items-center space-y-6 text-sm font-medium tracking-widest uppercase">
+          <a href="menu.html" class="text-white transition hover:text-amber-400">Menú</a>
+          <a href="paquetes.html" class="text-white transition hover:text-amber-400">Paquetes</a>
+          <a href="index.html#gallery" class="text-white transition hover:text-amber-400">Gallery</a>
+          <a href="index.html#sobre-nosotros" class="text-white transition hover:text-amber-400">Sobre Nosotros</a>
+          <a href="contacto.html" class="text-white transition hover:text-amber-400">Contacto</a>
+          <a href="contacto.html" class="px-6 py-3 mt-4 text-xs tracking-widest uppercase transition border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-neutral-950">Cotizar Evento</a>
+        </nav>
+      </div>
 
     <!-- ==========================================
        SECCIÓN CENTRAL (HERO)
        ========================================== -->
     <main>
       <section
-        class="relative flex flex-col justify-between w-full h-screen bg-center bg-no-repeat bg-cover"
-        style="
-          background-image: linear-gradient(
-              rgba(0, 0, 0, 0.65),
-              rgba(0, 0, 0, 0.65)
-            ),
-            url('https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1920&auto=format&fit=crop');
-        "
+        class="relative flex flex-col justify-between w-full h-screen overflow-hidden bg-neutral-950 reveal"
       >
-        <!-- Contenedor principal de textos -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+          <div
+            class="absolute inset-0 z-10 pointer-events-none bg-black/65"
+          ></div>
+
+          <img
+            src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1920&auto=format&fit=crop"
+            alt="Experiencia Parloteo - Banquetes"
+            class="absolute inset-0 object-cover object-center w-full h-full select-none hero-slide active"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1920"
+            alt="Experiencia Parloteo - Mixología"
+            class="absolute inset-0 object-cover object-center w-full h-full select-none hero-slide"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1920"
+            alt="Experiencia Parloteo - Parrilla"
+            class="absolute inset-0 object-cover object-center w-full h-full select-none hero-slide"
+          />
+        </div>
+
         <div
-          class="flex flex-col items-center justify-center flex-grow px-4 text-center md:px-0"
+          class="relative z-20 flex flex-col items-center justify-center flex-grow px-4 text-center text-white md:px-0"
         >
-          <!-- Elemento decorativo superior -->
           <span
-            class="mb-3 text-4xl tracking-wide text-amber-400 md:text-5xl font-cursive"
+            class="mb-3 text-4xl tracking-wide text-amber-400 md:text-5xl font-logo-instagram"
           >
             Exquisitez en cada detalle
           </span>
 
-          <!-- Título de impacto principal -->
           <h1
             class="max-w-4xl mb-6 text-4xl font-light leading-tight tracking-tight md:text-7xl font-serif-elegant"
           >
             La mejor experiencia de sabor para tus eventos
           </h1>
 
-          <!-- Texto descriptivo introductorio -->
           <p
             class="max-w-xl mb-10 text-sm font-light leading-relaxed tracking-wide text-white/70 md:text-base"
           >
@@ -172,7 +180,6 @@
             inolvidables.
           </p>
 
-          <!-- Botón de acción principal -->
           <div>
             <a
               href="#contacto"
@@ -183,25 +190,22 @@
           </div>
         </div>
 
-        <!-- Elemento decorativo inferior -->
         <div
-          class="w-full pb-8 text-xs tracking-widest text-center uppercase opacity-40"
+          class="relative z-20 w-full pb-8 text-xs tracking-widest text-center text-white uppercase opacity-40"
         >
           <span>Desliza para explorar ↓</span>
         </div>
       </section>
-
       <!-- ==========================================
        SECCIÓN: NUESTROS MENÚS / EXPERIENCIAS
        ========================================== -->
       <section
         id="menu"
-        class="px-6 py-24 border-b md:px-16 bg-neutral-900 border-white/5"
+        class="px-6 py-24 border-b md:px-16 bg-neutral-900 border-white/5 reveal"
       >
         <div class="mx-auto max-w-7xl">
-          <!-- Encabezado de la sección -->
           <div class="mb-16 text-center">
-            <span class="block mb-2 text-3xl text-amber-400 font-cursive"
+            <span class="block mb-2 text-3xl text-amber-400 font-logo-instagram"
               >Para compartir y disfrutar</span
             >
             <h2
@@ -212,13 +216,10 @@
             <div class="w-16 h-[1px] bg-amber-500/50 mx-auto mt-6"></div>
           </div>
 
-          <!-- Grid de Tarjetas de Menú -->
           <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <!-- Tarjeta 1: Asados / Parrilladas (Muy fuerte en la vibra de GDL) -->
             <div
               class="group relative overflow-hidden bg-neutral-950 border border-white/10 flex flex-col justify-between h-[450px] transition-all duration-500 hover:border-amber-500/40"
             >
-              <!-- Imagen de fondo con zoom al hacer hover -->
               <div
                 class="absolute inset-0 z-0 transition-transform duration-700 ease-out bg-center bg-cover group-hover:scale-110"
                 style="
@@ -231,7 +232,6 @@
                 "
               ></div>
 
-              <!-- Contenido superior (Etiqueta opcional) -->
               <div class="z-10 p-6 text-right">
                 <span
                   class="text-[10px] uppercase tracking-widest bg-amber-500 text-neutral-950 font-bold px-3 py-1"
@@ -239,7 +239,6 @@
                 >
               </div>
 
-              <!-- Contenido inferior informativo -->
               <div
                 class="z-10 p-6 transition-transform duration-300 transform md:p-8"
               >
@@ -255,20 +254,22 @@
                   momento. Ideal para eventos al aire libre con esencia
                   artesanal.
                 </p>
-                <a
-                  href="#contacto"
-                  class="inline-flex items-center text-[11px] uppercase tracking-widest font-semibold text-amber-400 hover:text-white transition-colors"
+
+                <button
+                  class="btn-paquete inline-flex items-center text-[11px] uppercase tracking-widest font-semibold text-amber-400 hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer focus:outline-none"
+                  data-titulo="Fuego & Brasa"
+                  data-precio="Desde $580 MXN / Persona"
+                  data-detalles="Para Empezar: Tabla de quesos artesanales, embutidos finos y pan de masa madre tostado al carbón | El Plato Fuerte: Picaña premium, Rib Eye high-choice y vacío argentino al término perfecto | Las Guarniciones: Tuétanos a la brasa con sal de grano, papas rústicas al romero y vegetales ahumados | Salsas de Autor: Chimichurri casero de la casa, salsa macha de tres chiles y aderezo de ajo tostado | El Cierre: Piña asada a las brasas con canela, azúcar mascabado y un toque de mezcal"
                 >
                   Explorar opciones
                   <span
                     class="ml-2 transition-transform transform group-hover:translate-x-1"
-                    >→</span
+                    >⟶</span
                   >
-                </a>
+                </button>
               </div>
             </div>
 
-            <!-- Tarjeta 2: Finger Food / Coctel (Perfecto para "Parlotear") -->
             <div
               class="group relative overflow-hidden bg-neutral-950 border border-white/10 flex flex-col justify-between h-[450px] transition-all duration-500 hover:border-amber-500/40"
             >
@@ -299,20 +300,22 @@
                   eventos dinámicos donde la conversación y el maridaje fluyen
                   sin pausa.
                 </p>
-                <a
-                  href="#contacto"
-                  class="inline-flex items-center text-[11px] uppercase tracking-widest font-semibold text-amber-400 hover:text-white transition-colors"
+
+                <button
+                  class="btn-paquete inline-flex items-center text-[11px] uppercase tracking-widest font-semibold text-amber-400 hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer focus:outline-none"
+                  data-titulo="Cocktail & Canapés"
+                  data-precio="Desde $420 MXN / Persona"
+                  data-detalles="Canapés Salados: Tartar de atún con aderezo de sésamo y jengibre en tostada de maíz azul | Bocadillos Calientes: Croquetas de jamón serrano con emulsión de ajo tierno y brotes orgánicos | Barra Fría: Ceviche de pesca del día marinado en cítricos con cubos de mango y habanero sutil | Mixología Incluida: Gin Tonic de frutos rojos macerados, Carajillo Parloteo shakeado y Margaritas de mezcal con damiana | Canapés Dulces: Mini tartas de frutos de la estación con crema pastelera de vainilla de Papantla"
                 >
                   Explorar opciones
                   <span
                     class="ml-2 transition-transform transform group-hover:translate-x-1"
-                    >→</span
+                    >⟶</span
                   >
-                </a>
+                </button>
               </div>
             </div>
 
-            <!-- Tarjeta 3: Banquetes Plated / Formal -->
             <div
               class="group relative overflow-hidden bg-neutral-950 border border-white/10 flex flex-col justify-between h-[450px] transition-all duration-500 hover:border-amber-500/40"
             >
@@ -343,16 +346,19 @@
                   con técnica contemporánea para bodas o cenas corporativas
                   exclusivas.
                 </p>
-                <a
-                  href="#contacto"
-                  class="inline-flex items-center text-[11px] uppercase tracking-widest font-semibold text-amber-400 hover:text-white transition-colors"
+
+                <button
+                  class="btn-paquete inline-flex items-center text-[11px] uppercase tracking-widest font-semibold text-amber-400 hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer focus:outline-none"
+                  data-titulo="Alta Cocina"
+                  data-precio="Desde $720 MXN / Persona"
+                  data-detalles="Primer Tiempo (Entrada): Crema aterciopelada de nuez de la india con un toque de jerez y crujiente de parmesano | Segundo Tiempo (Intermedio): Risotto perfumado con aceite de trufa blanca y hongos silvestres de estación | Tercer Tiempo (Plato Fuerte): Medallón de filete de res premium en reducción de vino tinto sobre cama de puré rústico | Cuarto Tiempo (Postre): Volcán de chocolate amargo 70% cacao acompañado de gelato artesanal de vainilla | Logística Alta Gama: Servicio de meseros profesionales coordinados por tiempos, cristalería fina y montaje de mantelería de lujo"
                 >
                   Explorar opciones
                   <span
                     class="ml-2 transition-transform transform group-hover:translate-x-1"
-                    >→</span
+                    >⟶</span
                   >
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -361,11 +367,11 @@
 
       <section
         id="paquetes"
-        class="py-24 text-white border-b bg-neutral-950 border-white/5"
+        class="py-24 text-white border-b bg-neutral-950 border-white/5 reveal"
       >
         <div class="px-6 mx-auto max-w-7xl md:px-16">
           <div class="mb-20 text-center">
-            <span class="block mb-2 text-3xl text-amber-400 font-cursive"
+            <span class="block mb-2 text-3xl text-amber-400 font-logo-instagram"
               >Diseñados a tu medida</span
             >
             <h2
@@ -384,19 +390,27 @@
             >
               <span
                 class="mb-2 text-lg italic text-amber-400 font-serif-elegant"
-                >Desde $350 mxn / persona</span
+                >Desde $350 MXN / Persona</span
               >
               <h3 class="mb-4 text-2xl tracking-wide font-serif-elegant">
                 Bodas & Banquetes
               </h3>
               <div class="w-8 h-[1px] bg-amber-500/30 mb-4"></div>
               <p
-                class="max-w-xs text-xs font-light leading-relaxed text-stone-400"
+                class="max-w-xs mb-6 text-xs font-light leading-relaxed text-stone-400"
               >
                 Servicio integral con menú formal de tiempos, montaje de mesas
                 de gala, loza fina, cristalería y coordinación completa de
                 meseros para tu gran noche.
               </p>
+              <button
+                class="btn-paquete text-[10px] uppercase tracking-widest text-amber-400 hover:text-white border-b border-amber-400/30 hover:border-white pb-1 transition-colors duration-300 bg-transparent cursor-pointer focus:outline-none"
+                data-titulo="Bodas & Banquetes"
+                data-precio="Desde $350 MXN / Persona"
+                data-detalles="Coordinación del Evento: Planificación y dirección operativa del servicio de alimentos durante la recepción | Montaje de Gala: Mesas redondas o tablones imperiales con mantelería fina a elegir | Cristalería & Loza: Platos base premium, vajilla de porcelana, copas de cristal y cubertería de alta gama | Servicio de Cathering: Meseros profesionales uniformados (1 por cada 20 invitados) y capitán de meseros | Menú Personalizado: Prueba de menú previa para selección de platillos y opciones para restricciones alimenticias"
+              >
+                Detalles del Paquete →
+              </button>
             </div>
 
             <div
@@ -422,12 +436,20 @@
               </h3>
               <div class="w-8 h-[1px] bg-amber-500/30 mb-4"></div>
               <p
-                class="max-w-xs text-xs font-light leading-relaxed text-stone-400"
+                class="max-w-xs mb-6 text-xs font-light leading-relaxed text-stone-400"
               >
                 Cocteles de fin de año, lanzamientos de marca y coffee breaks
                 premium. Logística puntual y bocadillos diseñados para
                 networking dinámico.
               </p>
+              <button
+                class="btn-paquete text-[10px] uppercase tracking-widest text-amber-400 hover:text-white border-b border-amber-400/30 hover:border-white pb-1 transition-colors duration-300 bg-transparent cursor-pointer focus:outline-none"
+                data-titulo="Eventos Empresariales"
+                data-precio="Cotización basada en requerimientos corporativos"
+                data-detalles="Logística de Precisión: Cumplimiento estricto de cronogramas corporativos para Coffee Breaks y activaciones | Barra de Coffee Break: Café de especialidad ilimitado, barra de tés, panadería miniatura artesanal y jugos naturales | Bocadillos Ejecutivos: Selección de bocados fríos y calientes de fácil manejo para favorecer el networking | Estaciones Temáticas: Opciones de barras de bebidas personalizadas o barras de snacks saludables | Personal de Servicio: Staff uniformado de manera ejecutiva y asistencia técnica continua en barra"
+              >
+                Detalles del Paquete →
+              </button>
             </div>
 
             <div
@@ -451,12 +473,20 @@
               </h3>
               <div class="w-8 h-[1px] bg-amber-500/30 mb-4"></div>
               <p
-                class="max-w-xs text-xs font-light leading-relaxed text-stone-400"
+                class="max-w-xs mb-6 text-xs font-light leading-relaxed text-stone-400"
               >
                 Cumpleaños, aniversarios o reuniones íntimas en casa con barras
                 de destilados, estaciones de comida en vivo (Live Cooking) y
                 estilo relajado.
               </p>
+              <button
+                class="btn-paquete text-[10px] uppercase tracking-widest text-amber-400 hover:text-white border-b border-amber-400/30 hover:border-white pb-1 transition-colors duration-300 bg-transparent cursor-pointer focus:outline-none"
+                data-titulo="Celebraciones Pop-Up"
+                data-precio="Diseño modular según formato"
+                data-detalles="Live Cooking (Cocina en Vivo): Chefs preparando alimentos interactivamente frente a tus invitados | Barras de Destilados: Servicio de barman profesional con mezcladores premium e insumos frescos | Mobiliario Lounge: Adaptación opcional de periqueras de madera o barras móviles de estilo industrial | Menús Relajados: Estaciones de sliders gourmet, tacos de autor en maíz criollo o tablas de tapeo rústico | Flexibilidad Total: Ideal para jardines privados, terrazas residenciales o locaciones secretas de cupo limitado"
+              >
+                Detalles del Paquete →
+              </button>
             </div>
 
             <div
@@ -489,12 +519,11 @@
        ========================================== -->
       <section
         id="gallery"
-        class="py-24 text-white border-b bg-neutral-950 border-white/5"
+        class="py-24 text-white border-b bg-neutral-950 border-white/5 reveal"
       >
         <div class="px-6 mx-auto max-w-7xl md:px-16">
-          <!-- Encabezado de la Sección -->
           <div class="mb-16 text-center">
-            <span class="block mb-2 text-3xl text-amber-400 font-cursive"
+            <span class="block mb-2 text-3xl text-amber-400 font-logo-instagram"
               >Momentos Parloteo</span
             >
             <h2
@@ -505,21 +534,19 @@
             <div class="w-16 h-[1px] bg-amber-500/50 mx-auto mt-6"></div>
           </div>
 
-          <!-- Grid Asimétrica Premium de 4 Columnas (Cerrada sin huecos) -->
           <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[240px]"
           >
-            <!-- Foto 1: Vertical Grande (Ocupa 2 filas de alto) -->
             <div
               class="group relative overflow-hidden bg-neutral-900 md:row-span-2 md:h-full h-[480px]"
             >
               <img
                 src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=600&auto=format&fit=crop"
                 alt="Montaje de buffet premium"
-                class="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
+                class="object-cover w-full h-full transition-transform duration-700 ease-out cursor-pointer btn-lightbox group-hover:scale-110"
               />
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
+                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 pointer-events-none bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
               >
                 <span
                   class="text-[10px] uppercase tracking-widest text-amber-400 mb-1"
@@ -531,17 +558,16 @@
               </div>
             </div>
 
-            <!-- Foto 2: Horizontal Grande (Ocupa 2 columnas de ancho) -->
             <div
               class="relative overflow-hidden group bg-neutral-900 md:col-span-2"
             >
               <img
                 src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop"
                 alt="Platillo de autor emplatado"
-                class="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
+                class="object-cover w-full h-full transition-transform duration-700 ease-out cursor-pointer btn-lightbox group-hover:scale-110"
               />
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
+                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 pointer-events-none bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
               >
                 <span
                   class="text-[10px] uppercase tracking-widest text-amber-400 mb-1"
@@ -553,15 +579,14 @@
               </div>
             </div>
 
-            <!-- Foto 3: Cuadrada Estándar Superior Derecha -->
             <div class="relative overflow-hidden group bg-neutral-900">
               <img
                 src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=600&auto=format&fit=crop"
                 alt="Brindis en evento corporativo"
-                class="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
+                class="object-cover w-full h-full transition-transform duration-700 ease-out cursor-pointer btn-lightbox group-hover:scale-110"
               />
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
+                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 pointer-events-none bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
               >
                 <span
                   class="text-[10px] uppercase tracking-widest text-amber-400 mb-1"
@@ -573,15 +598,14 @@
               </div>
             </div>
 
-            <!-- Foto 4: Cuadrada Centro Fila 2 -->
             <div class="relative overflow-hidden group bg-neutral-900">
               <img
                 src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600&auto=format&fit=crop"
                 alt="Mixología y cócteles premium"
-                class="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
+                class="object-cover w-full h-full transition-transform duration-700 ease-out cursor-pointer btn-lightbox group-hover:scale-110"
               />
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
+                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 pointer-events-none bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
               >
                 <span
                   class="text-[10px] uppercase tracking-widest text-amber-400 mb-1"
@@ -593,17 +617,16 @@
               </div>
             </div>
 
-            <!-- Foto 5: Horizontal Mediana Fila 2 (Cierra el espacio del centro) -->
             <div
               class="relative overflow-hidden group bg-neutral-900 md:col-span-2"
             >
               <img
                 src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop"
                 alt="Detalle de platillos gourmet"
-                class="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
+                class="object-cover w-full h-full transition-transform duration-700 ease-out cursor-pointer btn-lightbox group-hover:scale-110"
               />
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
+                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 pointer-events-none bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
               >
                 <span
                   class="text-[10px] uppercase tracking-widest text-amber-400 mb-1"
@@ -615,15 +638,14 @@
               </div>
             </div>
 
-            <!-- Foto 6: Cuadrada Esquina Inferior Izquierda (Abajo de la vertical grande) -->
             <div class="relative overflow-hidden group bg-neutral-900">
               <img
                 src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600&auto=format&fit=crop"
                 alt="Pizzas artesanales e ingredientes frescos"
-                class="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
+                class="object-cover w-full h-full transition-transform duration-700 ease-out cursor-pointer btn-lightbox group-hover:scale-110"
               />
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
+                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 pointer-events-none bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
               >
                 <span
                   class="text-[10px] uppercase tracking-widest text-amber-400 mb-1"
@@ -635,15 +657,14 @@
               </div>
             </div>
 
-            <!-- Foto 7: NUEVA - Cuadrada para balancear la parte inferior -->
             <div class="relative overflow-hidden group bg-neutral-900">
               <img
                 src="https://images.unsplash.com/photo-1516685018646-549198525c1b?q=80&w=600&auto=format&fit=crop"
                 alt="Parrilla y asados de carne"
-                class="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
+                class="object-cover w-full h-full transition-transform duration-700 ease-out cursor-pointer btn-lightbox group-hover:scale-110"
               />
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
+                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 pointer-events-none bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
               >
                 <span
                   class="text-[10px] uppercase tracking-widest text-amber-400 mb-1"
@@ -655,17 +676,16 @@
               </div>
             </div>
 
-            <!-- Foto 8: NUEVA - Cuadrada Esquina Inferior Derecha final -->
             <div
               class="relative overflow-hidden group bg-neutral-900 md:col-span-2"
             >
               <img
                 src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=800&auto=format&fit=crop"
                 alt="Ambiente de fiesta y banquete"
-                class="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
+                class="object-cover w-full h-full transition-transform duration-700 ease-out cursor-pointer btn-lightbox group-hover:scale-110"
               />
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
+                class="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 pointer-events-none bg-neutral-950/40 group-hover:bg-amber-950/80 group-hover:opacity-100"
               >
                 <span
                   class="text-[10px] uppercase tracking-widest text-amber-400 mb-1"
@@ -680,162 +700,213 @@
         </div>
       </section>
 
-      <!-- ==========================================
-       SECCIÓN: OPINIONES (CARRUSEL MINIMALISTA)
-       ========================================== -->
       <section
-        id="opiniones"
-        class="py-24 overflow-hidden text-white border-b bg-neutral-950 border-white/5"
+        class="py-24 overflow-hidden text-white border-b bg-neutral-950 border-white/5 reveal"
       >
-        <div class="px-6 mx-auto max-w-7xl md:px-16">
-          <!-- Encabezado de la Sección -->
-          <div
-            class="flex flex-col gap-4 mb-12 md:flex-row md:items-end md:justify-between"
-          >
-            <div>
-              <span class="block mb-2 text-3xl text-amber-400 font-cursive"
-                >Experiencias reales</span
-              >
-              <h2
-                class="text-3xl font-light tracking-tight uppercase md:text-4xl font-serif-elegant"
-              >
-                Lo que dicen de nosotros
-              </h2>
-              <div class="w-12 h-[1px] bg-amber-500/50 mt-4"></div>
-            </div>
-            <!-- Indicador sutil para móviles/escritorio -->
-            <span
-              class="text-[10px] uppercase tracking-widest text-stone-500 font-medium hidden sm:block"
+        <div class="container px-4 mx-auto">
+          <div class="max-w-6xl mx-auto mb-12 text-center md:text-left">
+            <span class="text-sm tracking-widest uppercase text-amber-400"
+              >Experiencias reales</span
             >
-              Desliza para ver más &rarr;
-            </span>
+            <h2
+              class="mt-2 text-3xl font-light tracking-wide text-white uppercase md:text-4xl"
+            >
+              Lo que dicen de nosotros
+            </h2>
+            <div class="h-0.5 w-16 bg-amber-500 mt-4 mx-auto md:mx-0"></div>
           </div>
 
-          <!-- Contenedor Carrusel Horizontal Nativo con Barra Estilizada -->
           <div
-            id="carrusel-opiniones"
-            class="flex gap-6 pb-8 overflow-x-auto snap-x snap-mandatory cursor-grab active:cursor-grabbing"
-            style="-ms-overflow-style: auto; scrollbar-width: thin"
+            class="relative flex items-center justify-center max-w-6xl px-2 mx-auto md:px-16"
           >
-            <!-- Testimonio 1 -->
-            <div
-              class="min-w-[280px] sm:min-w-[350px] md:flex-1 bg-neutral-900 border border-white/5 p-8 flex flex-col justify-between snap-start transition-all duration-300 hover:border-amber-500/20"
+            <button
+              id="btn-prev-opinion"
+              class="absolute left-0 z-30 border border-white/10 bg-neutral-900/60 hover:border-amber-400 text-white hover:text-neutral-950 hover:bg-amber-500 p-3.5 transition-all duration-300 focus:outline-none backdrop-blur-md rounded-none"
+              aria-label="Opinión anterior"
             >
-              <div>
-                <div class="flex text-amber-400 space-x-1 mb-4 text-[10px]">
-                  <span>★</span><span>★</span><span>★</span><span>★</span
-                  ><span>★</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                />
+              </svg>
+            </button>
+
+            <div class="w-full py-6 overflow-hidden">
+              <div
+                id="carrusel-slider"
+                class="flex transition-transform duration-500 ease-out"
+              >
+                <div
+                  class="box-border flex-shrink-0 w-full px-4 opinion-card md:w-1/3"
+                >
+                  <div
+                    class="flex flex-col justify-between h-full p-8 border inner-card bg-neutral-900 border-white/5"
+                  >
+                    <div>
+                      <div
+                        class="flex text-amber-400 space-x-1 mb-4 text-[10px]"
+                      >
+                        <span>★</span><span>★</span><span>★</span><span>★</span
+                        ><span>★</span>
+                      </div>
+                      <p
+                        class="mb-6 text-xs italic font-light leading-relaxed text-stone-300"
+                      >
+                        "Contratamos a Parloteo para nuestra boda en Zapopan y
+                        fue la mejor decisión. El banquete de tres tiempos salió
+                        caliente, impecable y todos se quedaron hablando de la
+                        calidad de la carne."
+                      </p>
+                    </div>
+                    <div>
+                      <div class="w-6 h-[1px] bg-amber-500/30 mb-3"></div>
+                      <h4 class="text-sm text-white font-serif-elegant">
+                        Mariana & Alejandro
+                      </h4>
+                      <span
+                        class="text-[10px] text-stone-500 uppercase tracking-widest block mt-0.5"
+                        >Boda Banquete</span
+                      >
+                    </div>
+                  </div>
                 </div>
-                <p
-                  class="mb-6 text-xs italic font-light leading-relaxed text-stone-300"
+
+                <div
+                  class="box-border flex-shrink-0 w-full px-4 opinion-card md:w-1/3"
                 >
-                  "Contratamos a Parloteo para nuestra boda en Zapopan y fue la
-                  mejor decisión. El banquete de tres tiempos salió caliente,
-                  impecable y todos se quedaron hablando de la calidad de la
-                  carne."
-                </p>
-              </div>
-              <div>
-                <div class="w-6 h-[1px] bg-amber-500/30 mb-3"></div>
-                <h4 class="text-sm text-white font-serif-elegant">
-                  Mariana & Alejandro
-                </h4>
-                <span
-                  class="text-[10px] text-stone-500 uppercase tracking-widest block mt-0.5"
-                  >Boda Banquete</span
+                  <div
+                    class="flex flex-col justify-between h-full p-8 border inner-card bg-neutral-900 border-white/5"
+                  >
+                    <div>
+                      <div
+                        class="flex text-amber-400 space-x-1 mb-4 text-[10px]"
+                      >
+                        <span>★</span><span>★</span><span>★</span><span>★</span
+                        ><span>★</span>
+                      </div>
+                      <p
+                        class="mb-6 text-xs italic font-light leading-relaxed text-stone-300"
+                      >
+                        "Excelente logística para nuestro evento corporativo de
+                        fin de año. Los bocadillos gourmet y la barra de
+                        mixología premium mantuvieron al equipo integrado. Muy
+                        profesionales con los tiempos."
+                      </p>
+                    </div>
+                    <div>
+                      <div class="w-6 h-[1px] bg-amber-500/30 mb-3"></div>
+                      <h4 class="text-sm text-white font-serif-elegant">
+                        Ing. Carlos Sainz
+                      </h4>
+                      <span
+                        class="text-[10px] text-stone-500 uppercase tracking-widest block mt-0.5"
+                        >Evento Empresarial</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="box-border flex-shrink-0 w-full px-4 opinion-card md:w-1/3"
                 >
+                  <div
+                    class="flex flex-col justify-between h-full p-8 border inner-card bg-neutral-900 border-white/5"
+                  >
+                    <div>
+                      <div
+                        class="flex text-amber-400 space-x-1 mb-4 text-[10px]"
+                      >
+                        <span>★</span><span>★</span><span>★</span><span>★</span
+                        ><span>★</span>
+                      </div>
+                      <p
+                        class="mb-6 text-xs italic font-light leading-relaxed text-stone-300"
+                      >
+                        "Organizamos una parrillada rústica familiar en casa y
+                        el chef se la rifó. El ambiente que arman alrededor del
+                        fuego y los cortes al punto exacto hicieron que la
+                        celebración fuera inolvidable."
+                      </p>
+                    </div>
+                    <div>
+                      <div class="w-6 h-[1px] bg-amber-500/30 mb-3"></div>
+                      <h4 class="text-sm text-white font-serif-elegant">
+                        Ricardo Treviño
+                      </h4>
+                      <span
+                        class="text-[10px] text-stone-500 uppercase tracking-widest block mt-0.5"
+                        >Cumpleaños Privado</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="box-border flex-shrink-0 w-full px-4 opinion-card md:w-1/3"
+                >
+                  <div
+                    class="flex flex-col justify-between h-full p-8 border inner-card bg-neutral-900 border-white/5"
+                  >
+                    <div>
+                      <div
+                        class="flex text-amber-400 space-x-1 mb-4 text-[10px]"
+                      >
+                        <span>★</span><span>★</span><span>★</span><span>★</span
+                        ><span>★</span>
+                      </div>
+                      <p
+                        class="mb-6 text-xs italic font-light leading-relaxed text-stone-300"
+                      >
+                        "La atención al detalle desde la primera cotización
+                        hasta el desmontaje fue impecable. Menús personalizados
+                        que se adaptaron perfecto a opciones veganas que
+                        necesitábamos. 100% recomendados."
+                      </p>
+                    </div>
+                    <div>
+                      <div class="w-6 h-[1px] bg-amber-500/30 mb-3"></div>
+                      <h4 class="text-sm text-white font-serif-elegant">
+                        Sofía Villanueva
+                      </h4>
+                      <span
+                        class="text-[10px] text-stone-500 uppercase tracking-widest block mt-0.5"
+                        >Aniversario</span
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Testimonio 2 -->
-            <div
-              class="min-w-[280px] sm:min-w-[350px] md:flex-1 bg-neutral-900 border border-white/5 p-8 flex flex-col justify-between snap-start transition-all duration-300 hover:border-amber-500/20"
+            <button
+              id="btn-next-opinion"
+              class="absolute right-0 z-30 border border-white/10 bg-amber-500 text-neutral-950 p-3.5 transition-all duration-300 focus:outline-none rounded-none shadow-lg shadow-amber-500/10"
+              aria-label="Siguiente opinión"
             >
-              <div>
-                <div class="flex text-amber-400 space-x-1 mb-4 text-[10px]">
-                  <span>★</span><span>★</span><span>★</span><span>★</span
-                  ><span>★</span>
-                </div>
-                <p
-                  class="mb-6 text-xs italic font-light leading-relaxed text-stone-300"
-                >
-                  "Excelente logística para nuestro evento corporativo de fin de
-                  año. Los bocadillos gourmet y la barra de mixología premium
-                  mantuvieron al equipo integrado. Muy profesionales con los
-                  tiempos."
-                </p>
-              </div>
-              <div>
-                <div class="w-6 h-[1px] bg-amber-500/30 mb-3"></div>
-                <h4 class="text-sm text-white font-serif-elegant">
-                  Ing. Carlos Sainz
-                </h4>
-                <span
-                  class="text-[10px] text-stone-500 uppercase tracking-widest block mt-0.5"
-                  >Evento Empresarial</span
-                >
-              </div>
-            </div>
-
-            <!-- Testimonio 3 -->
-            <div
-              class="min-w-[280px] sm:min-w-[350px] md:flex-1 bg-neutral-900 border border-white/5 p-8 flex flex-col justify-between snap-start transition-all duration-300 hover:border-amber-500/20"
-            >
-              <div>
-                <div class="flex text-amber-400 space-x-1 mb-4 text-[10px]">
-                  <span>★</span><span>★</span><span>★</span><span>★</span
-                  ><span>★</span>
-                </div>
-                <p
-                  class="mb-6 text-xs italic font-light leading-relaxed text-stone-300"
-                >
-                  "Organizamos una parrillada rústica familiar en casa y el chef
-                  se la rifó. El ambiente que arman alrededor del fuego y los
-                  cortes al punto exacto hicieron que la celebración fuera
-                  inolvidable."
-                </p>
-              </div>
-              <div>
-                <div class="w-6 h-[1px] bg-amber-500/30 mb-3"></div>
-                <h4 class="text-sm text-white font-serif-elegant">
-                  Ricardo Treviño
-                </h4>
-                <span
-                  class="text-[10px] text-stone-500 uppercase tracking-widest block mt-0.5"
-                  >Cumpleaños Privado</span
-                >
-              </div>
-            </div>
-
-            <!-- Testimonio 4 -->
-            <div
-              class="min-w-[280px] sm:min-w-[350px] md:flex-1 bg-neutral-900 border border-white/5 p-8 flex flex-col justify-between snap-start transition-all duration-300 hover:border-amber-500/20"
-            >
-              <div>
-                <div class="flex text-amber-400 space-x-1 mb-4 text-[10px]">
-                  <span>★</span><span>★</span><span>★</span><span>★</span
-                  ><span>★</span>
-                </div>
-                <p
-                  class="mb-6 text-xs italic font-light leading-relaxed text-stone-300"
-                >
-                  "La atención al detalle desde la primera cotización hasta el
-                  desmontaje fue impecable. Menús personalizados que se
-                  adaptaron perfecto a opciones veganas que necesitábamos. 100%
-                  recomendados."
-                </p>
-              </div>
-              <div>
-                <div class="w-6 h-[1px] bg-amber-500/30 mb-3"></div>
-                <h4 class="text-sm text-white font-serif-elegant">
-                  Sofía Villanueva
-                </h4>
-                <span
-                  class="text-[10px] text-stone-500 uppercase tracking-widest block mt-0.5"
-                  >Aniversario</span
-                >
-              </div>
-            </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -845,7 +916,7 @@
        ========================================== -->
       <section
         id="sobre-nosotros"
-        class="py-24 text-white border-b bg-neutral-900 border-white/5"
+        class="py-24 text-white border-b bg-neutral-900 border-white/5 reveal"
       >
         <div class="px-6 mx-auto max-w-7xl md:px-16">
           <!-- PARTE 1: LA HISTORIA / FILOSOFÍA -->
@@ -1005,7 +1076,7 @@
        SECCIÓN: BANNER ASPIRACIONAL (CON FOTO DE FONDO)
        ========================================== -->
       <section
-        class="relative overflow-hidden border-b py-36 bg-neutral-950 border-white/5"
+        class="relative overflow-hidden border-b py-36 bg-neutral-950 border-white/5 reveal"
       >
         <!-- Imagen de Fondo Premium -->
         <img
@@ -1057,7 +1128,7 @@
       <!-- ==========================================
        SECCIÓN: CONTACTO & COTIZACIONES
        ========================================== -->
-      <section id="contacto" class="py-24 text-white bg-neutral-950">
+      <section id="contacto" class="py-24 text-white bg-neutral-950 reveal">
         <div class="px-6 mx-auto max-w-7xl md:px-16">
           <div class="grid items-start grid-cols-1 gap-16 md:grid-cols-2">
             <!-- Bloque Izquierdo: Información de contacto -->
@@ -1278,6 +1349,38 @@
           />
         </svg>
       </a>
+
+      <div
+        id="modal-global"
+        class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 transition-opacity duration-300 opacity-0 pointer-events-none bg-black/80 backdrop-blur-md"
+      >
+        <div
+          class="relative w-full max-w-lg p-8 border shadow-2xl bg-neutral-900 border-white/10 md:p-10 shadow-black"
+        >
+          <button
+            id="modal-cerrar"
+            class="absolute transition-colors duration-200 top-4 right-4 text-white/50 hover:text-amber-400 focus:outline-none"
+            aria-label="Cerrar ventana"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <div id="modal-content-area"></div>
+        </div>
+      </div>
     </main>
 
     <script src="app.js" defer></script>
